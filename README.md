@@ -1,8 +1,8 @@
 # "Godotv4.2.2.stable.mono.official [15073afe3]" Bug
 
-** Actual issue found on Godot Github is: ** https://github.com/godotengine/godot/issues/70414
+**Actual issue found on Godot Github is:** https://github.com/godotengine/godot/issues/70414
 
-** Documented workarounds/best practices: ** https://docs.godotengine.org/en/latest/tutorials/scripting/c_sharp/c_sharp_signals.html
+**Documented workarounds/best practices:** https://docs.godotengine.org/en/latest/tutorials/scripting/c_sharp/c_sharp_signals.html
 
 Note projet is named "TimerBug" because I have the same dispose error with a Timer in my main project and I had intended this to reproduce that, but in truth I am getting the dispose error on MANY different items in the reloaded scene.
 
@@ -27,7 +27,7 @@ Object name: 'GameScene'.
                  BugPlayer_ScriptMethods.generated.cs:34 @ bool BugPlayer.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&)
                  CSharpInstanceBridge.cs:24 @ Godot.NativeInterop.godot_bool Godot.Bridge.CSharpInstanceBridge.Call(nint, Godot.NativeInterop.godot_string_name*, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_variant_call_error*, Godot.NativeInterop.godot_variant*)`
 
-** Expected Result: **  Reloading a scene should Free/QueueFree any used resources and they should not be stuck in disposing in a freshly loaded scene.
+**Expected Result:**  Reloading a scene should Free/QueueFree any used resources and they should not be stuck in disposing in a freshly loaded scene.
 
 ### Issue appears to be similar to Github issue #71032 howver this is not to do with subscription of events, there are potentially 2 or more issues present in that github issue:
 https://github.com/godotengine/godot/issues/71032
