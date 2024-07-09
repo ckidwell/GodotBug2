@@ -1,5 +1,7 @@
 # "Godotv4.2.2.stable.mono.official [15073afe3]" Bug
 
+Note projet is named "TimerBug" because I have the same dispose error with a Timer in my main project and I had intended this to reproduce that, but in truth I am getting the dispose error on MANY different items in the reloaded scene.
+
 ## Reproduction Steps:
 1. Clone project
 2. Open in Godot 4.2.2.stable.mono
