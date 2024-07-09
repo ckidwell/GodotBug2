@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://btdx017p4musp"]
+
+[ext_resource type="Texture2D" uid="uid://baci3xg6rlf4w" path="res://images/rock.png" id="1_k2e5r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lv75a"]
+size = Vector2(54, 55)
+
+[node name="RockRigidBody2D" type="RigidBody2D"]
+max_contacts_reported = 1
+contact_monitor = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2, -1)
+texture = ExtResource("1_k2e5r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, -0.5)
+shape = SubResource("RectangleShape2D_lv75a")
+debug_color = Color(0.938998, 1.49205e-05, 0.621278, 0.42)

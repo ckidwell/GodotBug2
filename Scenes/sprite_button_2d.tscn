@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://0l3jr6fjuh2y"]
+
+[ext_resource type="Texture2D" uid="uid://ft8mbauwcmme" path="res://images/bug_play.png" id="1_wcee2"]
+[ext_resource type="Script" path="res://Scenes/SpriteButton2D.cs" id="2_d15v5"]
+
+[node name="SpriteButton2D" type="Sprite2D"]
+texture = ExtResource("1_wcee2")
+script = ExtResource("2_d15v5")

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bl353yeoo6acv"]
+
+[ext_resource type="Texture2D" uid="uid://dhe3rqsytpm0a" path="res://images/bug_restart.png" id="1_isbo7"]
+[ext_resource type="Script" path="res://Scenes/ReloadButton.cs" id="2_r5n2y"]
+
+[node name="ReloadButton" type="Sprite2D"]
+texture = ExtResource("1_isbo7")
+script = ExtResource("2_r5n2y")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bs5cpnr1j6o33"]
+
+[ext_resource type="PackedScene" uid="uid://b4bbq2bsf8mmf" path="res://Scenes/bug_player.tscn" id="1_snsbs"]
+
+[node name="BugCharacter" type="Area2D"]
+
+[node name="RigidBody2D" parent="." instance=ExtResource("1_snsbs")]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]

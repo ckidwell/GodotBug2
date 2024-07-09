@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4bbq2bsf8mmf"]
+
+[ext_resource type="Script" path="res://Scenes/BugPlayer.cs" id="1_skkfy"]
+[ext_resource type="Texture2D" uid="uid://d2e0twspvk8em" path="res://images/bug.png" id="1_tsdin"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_377gx"]
+size = Vector2(52.5, 11)
+
+[node name="BugRigidbody2D" type="RigidBody2D"]
+position = Vector2(0.75, -1)
+freeze = true
+freeze_mode = 1
+max_contacts_reported = 4
+contact_monitor = true
+script = ExtResource("1_skkfy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.75, 1)
+texture = ExtResource("1_tsdin")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 12.5)
+shape = SubResource("RectangleShape2D_377gx")
+debug_color = Color(0.878411, 0.420632, 3.85046e-07, 0.42)
+
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]

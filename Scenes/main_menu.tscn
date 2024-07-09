@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://b77ir0vn148mo"]
+
+[ext_resource type="Script" path="res://Scenes/MainMenu.cs" id="1_34tyb"]
+[ext_resource type="Texture2D" uid="uid://8l2boi2o8qwy" path="res://images/bug_menu.png" id="2_pvf47"]
+[ext_resource type="PackedScene" uid="uid://k6uv60b5y15r" path="res://Scenes/play_button.tscn" id="3_2lunq"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_34tyb")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+offset_right = 200.0
+offset_bottom = 500.0
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/MarginContainer"]
+position = Vector2(101, 251)
+texture = ExtResource("2_pvf47")
+
+[node name="SpriteButton2D" parent="CanvasLayer/MarginContainer" instance=ExtResource("3_2lunq")]
+position = Vector2(103, 443)
