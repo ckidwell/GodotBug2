@@ -22,3 +22,6 @@ Object name: 'GameScene'.
                  CSharpInstanceBridge.cs:24 @ Godot.NativeInterop.godot_bool Godot.Bridge.CSharpInstanceBridge.Call(nint, Godot.NativeInterop.godot_string_name*, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_variant_call_error*, Godot.NativeInterop.godot_variant*)`
 
 ** Expected Result: **  Reloading a scene should Free/QueueFree any used resources and they should not be stuck in disposing in a freshly loaded scene.
+
+### Issue appears to be similar to Github issue #71032 howver this is not to do with subscription of events, there are potentially 2 or more issues present in that github issue:
+https://github.com/godotengine/godot/issues/71032
